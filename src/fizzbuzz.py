@@ -2,7 +2,7 @@ __author__ = 'Kirros'
 import sys
 
 
-def fizzbuzz(x, y, i):
+def fizz_buzz(x, y, i):
     if i % x == 0:
         if i % y == 0:
             return "FB"
@@ -18,7 +18,7 @@ for test in test_cases:
     if test == "":
         continue
     test = (tuple(map(int, test.split(" "))))
-    print(" ".join(map(lambda x: fizzbuzz(test[0], test[1], x), range(1, test[2] + 1))))
+    print(" ".join(map(lambda x: fizz_buzz(test[0], test[1], x), range(1, test[2] + 1))))
 
 test_cases.close()
 
