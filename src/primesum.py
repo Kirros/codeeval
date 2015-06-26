@@ -13,13 +13,14 @@ def is_prime(n):
             return False
     return True
 
+currentNumber = 2
+primeCount = 0
+primeSum = 0
 
-def is_palindrome(n):
-    string = str(n)
-    return string == string[::-1]
+while primeCount < MAX:
+    if is_prime(currentNumber):
+        primeCount += 1
+        primeSum += currentNumber
+    currentNumber += 1
 
-
-for i in reversed(range(1, MAX)):
-    if is_prime(i) and is_palindrome(i):
-        print(i)
-        break
+print(primeSum)
