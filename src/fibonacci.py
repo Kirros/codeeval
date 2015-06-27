@@ -7,16 +7,16 @@ test_cases = open(sys.argv[1], 'r')
 fibonacci = [0, 1]
 
 
-def elongate_fibonacci(new_size):
+def elongate_fibonacci(max_index):
     global fibonacci
-    while len(fibonacci) < new_size:
+    while len(fibonacci) < max_index + 1:
         fibonacci.append(fibonacci[-1] + fibonacci[-2])
 
 
 def f(n):
     global fibonacci
-    while n >= len(fibonacci):
-        elongate_fibonacci(n + 2)
+    while n > len(fibonacci) - 1:
+        elongate_fibonacci(n)
     return fibonacci[n]
 
 
